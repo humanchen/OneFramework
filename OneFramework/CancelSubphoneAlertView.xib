@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jbV-xE-YDU" customClass="CancelSubphoneAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnK-yZ-gNa" userLabel="alertView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2N-La-ZTu">
+                            <attributedString key="attributedText">
+                                <fragment content="确认要取消次此副号？">
+                                    <attributes>
+                                        <color key="NSColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="mla-b4-64h">
+                            <attributedString key="attributedText">
+                                <fragment content="如果该号码是通过“申请新号码”的方式办理，取消后您将无法再次申请该号码为副号。取消前请确认解除该号码与第三方业务的绑定关系。">
+                                    <attributes>
+                                        <color key="NSColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" lineHeightMultiple="0.80000000000000004" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-Wd-Abq">
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="REN-qV-ruD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukJ-ga-v6e">
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="MM8-y8-i2b"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-oZ-phR">
+                            <state key="normal" title="确认">
+                                <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmAction:" destination="jbV-xE-YDU" eventType="touchUpInside" id="8aW-6n-cqs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-li-EJe">
+                            <state key="normal" image="tick_btn"/>
+                            <connections>
+                                <action selector="agreeCheckAction:" destination="jbV-xE-YDU" eventType="touchUpInside" id="gT6-n4-yTa"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8Y-Ok-bUS">
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-C3-Jlg" customClass="UIUnderlinedButton">
+                            <state key="normal">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="《中国移动和多号服务协议》">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                            <connections>
+                                <action selector="AgreementDetailAction:" destination="jbV-xE-YDU" eventType="touchUpInside" id="dcL-hM-wbg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q26-dE-h00">
+                            <state key="normal" title="放弃"/>
+                            <connections>
+                                <action selector="abandonAction:" destination="jbV-xE-YDU" eventType="touchUpInside" id="KPV-fO-Pgr"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mQ-Fw-KwE">
+                            <attributedString key="attributedText">
+                                <fragment content="副号">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="20" name="PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="1">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="：">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="20" name="PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="13829988876">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="20" name="Helvetica"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="eZx-Wd-Abq" firstAttribute="leading" secondItem="TnK-yZ-gNa" secondAttribute="leading" id="0Jt-7G-YEB"/>
+                        <constraint firstItem="eZx-Wd-Abq" firstAttribute="top" secondItem="EdA-li-EJe" secondAttribute="bottom" constant="10" id="0aY-V4-Rk5"/>
+                        <constraint firstItem="r2N-La-ZTu" firstAttribute="top" secondItem="3mQ-Fw-KwE" secondAttribute="bottom" constant="10" id="4DU-qb-JXH"/>
+                        <constraint firstItem="z8Y-Ok-bUS" firstAttribute="leading" secondItem="EdA-li-EJe" secondAttribute="trailing" constant="4" id="4If-pl-Zfg"/>
+                        <constraint firstItem="mla-b4-64h" firstAttribute="leading" secondItem="r2N-La-ZTu" secondAttribute="leading" id="4JF-SU-dzC"/>
+                        <constraint firstItem="Q26-dE-h00" firstAttribute="leading" secondItem="TnK-yZ-gNa" secondAttribute="leading" id="4Xu-5j-I6c"/>
+                        <constraint firstItem="r2N-La-ZTu" firstAttribute="leading" secondItem="TnK-yZ-gNa" secondAttribute="leading" constant="20" id="4hN-tA-nUG"/>
+                        <constraint firstItem="Q26-dE-h00" firstAttribute="top" secondItem="eZx-Wd-Abq" secondAttribute="bottom" id="77I-ef-ooc"/>
+                        <constraint firstItem="Gbd-C3-Jlg" firstAttribute="leading" secondItem="z8Y-Ok-bUS" secondAttribute="trailing" constant="3" id="7p3-D1-DXj"/>
+                        <constraint firstAttribute="trailing" secondItem="mla-b4-64h" secondAttribute="trailing" constant="20" id="8sD-9f-Pks"/>
+                        <constraint firstAttribute="bottom" secondItem="Q26-dE-h00" secondAttribute="bottom" id="CpL-oo-huw"/>
+                        <constraint firstItem="Gbd-C3-Jlg" firstAttribute="centerY" secondItem="EdA-li-EJe" secondAttribute="centerY" id="FBy-Tu-vmi"/>
+                        <constraint firstAttribute="bottom" secondItem="eZx-Wd-Abq" secondAttribute="bottom" constant="60" id="IUO-LU-I6U"/>
+                        <constraint firstAttribute="width" constant="290" id="NAq-yb-bd4"/>
+                        <constraint firstAttribute="trailing" secondItem="eZx-Wd-Abq" secondAttribute="trailing" id="PmP-tL-1G5"/>
+                        <constraint firstAttribute="bottom" secondItem="MeK-oZ-phR" secondAttribute="bottom" id="RJC-IV-JtQ"/>
+                        <constraint firstItem="MeK-oZ-phR" firstAttribute="leading" secondItem="ukJ-ga-v6e" secondAttribute="trailing" id="US2-iZ-N4U"/>
+                        <constraint firstItem="3mQ-Fw-KwE" firstAttribute="centerX" secondItem="TnK-yZ-gNa" secondAttribute="centerX" id="Xuv-Tv-60H"/>
+                        <constraint firstItem="EdA-li-EJe" firstAttribute="leading" secondItem="TnK-yZ-gNa" secondAttribute="leading" constant="10" id="bfG-4F-puO"/>
+                        <constraint firstAttribute="trailing" secondItem="MeK-oZ-phR" secondAttribute="trailing" id="dv8-BP-iZ7"/>
+                        <constraint firstItem="3mQ-Fw-KwE" firstAttribute="top" secondItem="TnK-yZ-gNa" secondAttribute="top" constant="30" id="gGC-9l-bDp"/>
+                        <constraint firstItem="z8Y-Ok-bUS" firstAttribute="centerY" secondItem="EdA-li-EJe" secondAttribute="centerY" id="gkb-3D-tWU"/>
+                        <constraint firstAttribute="bottom" secondItem="ukJ-ga-v6e" secondAttribute="bottom" id="kQ7-xg-BOp"/>
+                        <constraint firstItem="MeK-oZ-phR" firstAttribute="top" secondItem="eZx-Wd-Abq" secondAttribute="bottom" id="qvZ-Ao-F00"/>
+                        <constraint firstItem="ukJ-ga-v6e" firstAttribute="centerX" secondItem="TnK-yZ-gNa" secondAttribute="centerX" id="sYj-Jw-h0O"/>
+                        <constraint firstAttribute="height" constant="300" id="svd-uv-zlw"/>
+                        <constraint firstItem="ukJ-ga-v6e" firstAttribute="leading" secondItem="Q26-dE-h00" secondAttribute="trailing" id="toU-vB-vbp"/>
+                        <constraint firstItem="ukJ-ga-v6e" firstAttribute="top" secondItem="eZx-Wd-Abq" secondAttribute="bottom" id="uOi-VC-nSP"/>
+                        <constraint firstItem="mla-b4-64h" firstAttribute="top" secondItem="r2N-La-ZTu" secondAttribute="bottom" constant="8" id="ztk-2v-ESt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TnK-yZ-gNa" firstAttribute="bottom" secondItem="jbV-xE-YDU" secondAttribute="centerY" constant="50" id="1wC-oM-wQT"/>
+                <constraint firstItem="TnK-yZ-gNa" firstAttribute="top" secondItem="jbV-xE-YDU" secondAttribute="top" constant="100" id="ltE-5Q-2hT"/>
+                <constraint firstItem="TnK-yZ-gNa" firstAttribute="centerX" secondItem="jbV-xE-YDU" secondAttribute="centerX" id="rLG-ha-aQ9"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1wC-oM-wQT"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="agreeCheckBtn" destination="EdA-li-EJe" id="2FC-C0-hra"/>
+                <outlet property="alertView" destination="TnK-yZ-gNa" id="SzQ-2B-MTF"/>
+                <outlet property="beCanceledSubphoneLabel" destination="3mQ-Fw-KwE" id="kLz-cT-OoI"/>
+                <outlet property="confirmBtn" destination="MeK-oZ-phR" id="oDX-Q3-V1i"/>
+            </connections>
+            <point key="canvasLocation" x="-423" y="133"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tick_btn" width="17" height="17"/>
+    </resources>
+</document>
